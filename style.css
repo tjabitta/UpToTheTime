@@ -17,7 +17,7 @@ html, body{
     filter: FlipH;
 }
 
-#camera--trigger{
+#camera--trigger, #goto--camera{
     width: 200px;
     background-color: black;
     color: white;
