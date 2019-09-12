@@ -6,6 +6,7 @@ var track = null;
 const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
+    cameraLaunch = document.querySelector("#goto--camera"),
     cameraTrigger = document.querySelector("#camera--trigger");
 
 // Access the device camera and stream to cameraView
@@ -29,6 +30,10 @@ cameraTrigger.onclick = function() {
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
     cameraOutput.classList.add("taken");
     // track.stop();
+};
+cameraLaunch.onclick = function() {
+    document.getElementById("landing").style.display = "none";
+    document.getElementById("camera").style.display = "block";
 };
 
 // Start the video stream when the window loads
